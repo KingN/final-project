@@ -45,10 +45,14 @@
 In the following years the villa has suffered various changes to make it like as it is today.
 Now Villa Chiericati is included in the World Heritage Site City of Vicenza and the Palladian Villas of the Veneto, by Unesco.</p>
 
+<p><img src="http://kingn.github.com/final-project/images/VillaChiericati_2007_07_18_2.jpg" alt="villa"></p>
+
 <h1>Project description</h1>
 
 <p>The project that I developed is based on the plans of the Italian architect Ottavio Bertotti Scamozzi in 1781, with few little changes at my leisure, where I found no references or documentation, like the internal stairs, corridors and some  decorations.
 Villa Chiericati is characterized by Palladio’s usual tripartite division, but here the deep projecting loggia completely dominates the facade. This is Palladio’s first use of a true temple front proceding from the main body of the house, an element know in classical architecture as a pronaos. The rest of the villa is based on a rectangular plan with two floors built above a semi-basement.</p>
+
+<p><img src="http://kingn.github.com/final-project/images/Chiericati-vancimuglio-001.jpg" alt="plan1"><img src="http://kingn.github.com/final-project/images/confronto1.jpg" alt="plan2"><img src="http://kingn.github.com/final-project/images/confronto2.jpg" alt="plan3"></p>
 
 <h3>Hierarchical/Model decomposition</h3>
 
@@ -71,48 +75,59 @@ I also decided to take advantage of the symmetry of the plan to create an half p
 <h4>Basement</h4>
 
 <p>The basement is composed by the villa base, the main stairs, the atrium base and the pavement of the first floor.
---foto 
 The villa base has been created using SIMPLEX_GRID function while the pavement, using CUBOID function.
 For the atrium base I used SIMPLEX_GRID and BEZIER curves for atrium base arches. 
-The main stairs have been implemented through a function that I have personally developed. At the end, the wall of the main stairs has been created using SIMPLICIAL_COMPLEX function.
---foto</p>
+The main stairs have been implemented through a function that I have personally developed. At the end, the wall of the main stairs has been created using SIMPLICIAL_COMPLEX function.</p>
+
+<p><img src="http://kingn.github.com/final-project/images/basmentstairs.jpg" alt="base1"><img src="http://kingn.github.com/final-project/images/basement2.jpg" alt="base2"></p>
 
 <h4>First Floor</h4>
 
 <p>The first floor is composed by external and internal walls that have been created using SIMPLEX_GRID function.
----foto
-I have implemented also a simple internal stair using the alternative version of the above mentioned stairs function.
----foto</p>
+<img src="http://kingn.github.com/final-project/images/internal.jpg" alt="int1">
+I have implemented also a simple internal stair using the alternative version of the above mentioned stairs function.</p>
+
+<p><img src="http://kingn.github.com/final-project/images/scalaint1.JPG" alt="int2"><img src="http://kingn.github.com/final-project/images/scalaint2.JPG" alt="int3"></p>
 
 <h4>Second Floor</h4>
 
 <p>The second floor is composed by the superior pavement, internal superior walls and another stair.
----foto
-The walls has been implemented by SIMPLEX_GRID and SIMPLICIAL_COMPLEX.
----foto</p>
+<img src="http://kingn.github.com/final-project/images/scalaint3.jpg" alt="int4">
+The walls has been implemented by SIMPLEX_GRID and SIMPLICIAL_COMPLEX.</p>
+
+<p><img src="http://kingn.github.com/final-project/images/2floor.JPG" alt="int4"></p>
 
 <h4>Atrium</h4>
 
 <p>The atrium was one of the hardest parts of the project. It is composed by the atrium arch, the columns and the tympanum. 
-The atrium arch is made by BEZIER curves while the tympanum is a mix of CUBOID and SIMPLICIAL_COMPLEX.
-----foto
-The columns were created using CYL_SURFACE for the shaft, CUBOID, CUBIC_HERMITE and ROTATIONAL_SURFACE functions for the base and BEZIER for the capital.
----foto</p>
+The atrium arch is made by BEZIER curves while the tympanum is a mix of CUBOID and SIMPLICIAL_COMPLEX.</p>
+
+<p><img src="http://kingn.github.com/final-project/images/atrio3.jpg" alt="atr1"></p>
+
+<p>The columns were created using CYL_SURFACE for the shaft, CUBOID, CUBIC_HERMITE and ROTATIONAL_SURFACE functions for the base and BEZIER for the capital.</p>
+
+<p><img src="http://kingn.github.com/final-project/images/atrio2.jpg" alt="atr2"></p>
 
 <h4>Roof</h4>
 
-<p>I have decide to divide the roof in three parts(front,side,rear). All the three parts were created using SIMPLICIAL_COMPLEX function. 
----foto</p>
+<p>I have decide to divide the roof in three parts(front,side,rear). All the three parts were created using SIMPLICIAL_COMPLEX function.</p>
+
+<p><img src="http://kingn.github.com/final-project/images/alto.JPG" alt="roof"></p>
 
 <h4>Decorations</h4>
 
 <p>The decorations that I have decided to implement have been various: the internal and external frames, the windows fixtures, the balcony, the banister, the doors and the statues.
-The internal and external frames include the low, mid and top external frames, the windows and doors frames, the internal room frames and the atrium frames. All of them have been developed with SIMPLEX_GRID function and with the CUBIC_HERMITE function for the windows and door fixtures.
----foto
-The balcony, the banister and the doors were implemented by SIMPLEX_GRID and CUBOID functions.
----foto
-The statues have been made by creating a very simplified model, using  BEZIER, CUBIC_HERMITE and ROTATIONAL_SURFACE with CUBOID for the base.
-----foto</p>
+The internal and external frames include the low, mid and top external frames, the windows and doors frames, the internal room frames and the atrium frames. All of them have been developed with SIMPLEX_GRID function and with the CUBIC_HERMITE function for the windows and door fixtures.</p>
+
+<p><img src="http://kingn.github.com/final-project/images/atri1.JPG" alt="dec1"><img src="http://kingn.github.com/final-project/images/cornici.JPG" alt="dec2"></p>
+
+<p>The balcony, the banister and the doors were implemented by SIMPLEX_GRID and CUBOID functions.</p>
+
+<p><img src="http://kingn.github.com/final-project/images/finestre.JPG" alt="dec3"></p>
+
+<p>The statues have been made by creating a very simplified model, using  BEZIER, CUBIC_HERMITE and ROTATIONAL_SURFACE with CUBOID for the base.</p>
+
+<p><img src="http://kingn.github.com/final-project/images/statua.JPG" alt="dec4"></p>
 
 <h4>Special Functions</h4>
 
@@ -263,7 +278,7 @@ The statues have been made by creating a very simplified model, using  BEZIER, C
 <span class="p">};</span>
 </pre></div>
 </li>
-</ul>
+</ul><h3>Gallery</h3>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/KingN">KingN</a></p>
