@@ -96,13 +96,25 @@ The walls has been implemented by SIMPLEX_GRID and SIMPLICIAL_COMPLEX.
 <p>The atrium was one of the hardest parts of the project. It is composed by the atrium arch, the columns and the tympanum. 
 The atrium arch is made by BEZIER curves while the tympanum is a mix of CUBOID and SIMPLICIAL_COMPLEX.
 ----foto
-The columns were created using CYL_SURFACE for the shaft, CUBOID for the base and BEZIER for the capital.
+The columns were created using CYL_SURFACE for the shaft, CUBOID, CUBIC_HERMITE and ROTATIONAL_SURFACE functions for the base and BEZIER for the capital.
 ---foto</p>
 
 <h4>Roof</h4>
 
 <p>I have decide to divide the roof in three parts(front,side,rear). All the three parts were created using SIMPLICIAL_COMPLEX function. 
 ---foto</p>
+
+<h4>Decorations</h4>
+
+<p>The decorations that I have decided to implement have been various: the internal and external frames, the windows fixtures, the balcony, the banister, the doors and the statues.
+The internal and external frames include the low, mid and top external frames, the windows and doors frames, the internal room frames and the atrium frames. All of them have been developed with SIMPLEX_GRID function and with the CUBIC_HERMITE function for the windows and door fixtures.
+---foto
+The balcony, the banister and the doors were implemented by SIMPLEX_GRID and CUBOID functions.
+---foto
+The statues have been made by creating a very simplified model, using  BEZIER, CUBIC_HERMITE and ROTATIONAL_SURFACE with CUBOID for the base.
+----foto</p>
+
+<h2>Special Functions</h2>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/KingN">KingN</a></p>
