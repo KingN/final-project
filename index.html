@@ -1,74 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Final-project : " />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Villa Chiericati Plasm 3D Model by KingN</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Final-project</title>
   </head>
-
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/KingN/final-project">View on GitHub</a>
+      <header>
+        <h1>Villa Chiericati Plasm 3D Model</h1>
+        <p>Final project of Grafica Computazionale by Daniele Spidalieri, mat.266491</p>
+      </header>
 
-          <h1 id="project_title">Final-project</h1>
-          <h2 id="project_tagline"></h2>
+      <div id="banner">
+        <span id="logo"></span>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/KingN/final-project/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/KingN/final-project/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <a href="https://github.com/KingN/final-project" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/KingN/final-project/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/KingN/final-project/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>Introduction</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>In 1546, three brothers of Chiericati family divided the family holdings between them. Two of the brothers became patrons of Palladio: Girolamo Chiericati commissioned Palladio to build the imposing Palazzo Chiericati, in Vicenza, today the Museo Civico, and Giovanni Chiericati commissioned Palladio to build the Villa Chiericati. The villa is located in Vancimuglio in the province of Vicenza. It was probably designed in the late 1540s, and was under construction by 1554. When Giovanni died 1558, the villa was still without a roof or colonnades. In 1574, the property was purchased by Ludovico Porto, who had the villa completed by 1584 by Domenico Groppino, a local architect. 
+In the following years the villa has suffered various changes to make it like as it is today.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<h1>Project description</h1>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>The project that I developed is based on the plans of the Italian architect Ottavio Bertotti Scamozzi in 1781, with few little changes at my leisure, where I found no references or documentation, like the internal stairs, corridors and some  decorations.
+Villa Chiericati is characterized by Palladio’s usual tripartite division, but here the deep projecting loggia completely dominates the facade. This is Palladio’s first use of a true temple front proceding from the main body of the house, an element know in classical architecture as a pronaos. The rest of the villa is based on a rectangular plan with two floors built above a semi-basement.</p>
 
-<h3>Designer Templates</h3>
+<h3>Hierarchical/Model decomposition</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>For implement a 3d model of the villa I’ve decided to divide  it into five hierarchical parts with an bottom-up approach:</p>
 
-<h3>Rather Drive Stick?</h3>
+<ul>
+<li>Basement with main stairs and base of atrium</li>
+<li>First floor with external and internal walls with also the ceiling</li>
+<li>Second floor</li>
+<li>Roof</li>
+<li>Decoration(windows,frames, etc.)</li>
+</ul><p>All of these parts was then decomposed in sub-parts that assembled together through translation, rotations and duplications .
+I also decided to take advantage of the symmetry of the plan to create an half part and build the other half just reverting it.</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h3>Implementation</h3>
 
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>The project was implemented using Javascript and Plasm framework.</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Final-project maintained by <a href="https://github.com/KingN">KingN</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/KingN">KingN</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
