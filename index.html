@@ -52,7 +52,11 @@ Now Villa Chiericati is included in the World Heritage Site City of Vicenza and 
 <p>The project that I developed is based on the plans of the Italian architect Ottavio Bertotti Scamozzi in 1781, with few little changes at my leisure, where I found no references or documentation, like the internal stairs, corridors and some  decorations.
 Villa Chiericati is characterized by Palladio’s usual tripartite division, but here the deep projecting loggia completely dominates the facade. This is Palladio’s first use of a true temple front proceding from the main body of the house, an element know in classical architecture as a pronaos. The rest of the villa is based on a rectangular plan with two floors built above a semi-basement.</p>
 
-<p><img src="http://kingn.github.com/final-project/screen/Chiericati-vancimuglio-001.jpg" alt="plan1"><img src="http://kingn.github.com/final-project/screen/confronto1.jpg" alt="plan2"><img src="http://kingn.github.com/final-project/screen/confronto2.jpg" alt="plan3"></p>
+<p align="center"><img src="http://kingn.github.com/final-project/screen/Chiericati-vancimuglio-001.jpg" alt="plan1" width="303" height="450"></p>
+
+<p><img src="http://kingn.github.com/final-project/screen/confronto1.jpg" alt="plan2"></p>
+<p><img src="http://kingn.github.com/final-project/screen/confronto2.jpg" alt="plan3">
+</p>
 
 <h3>Hierarchical/Model decomposition</h3>
 
@@ -79,7 +83,7 @@ The villa base has been created using SIMPLEX_GRID function while the pavement, 
 For the atrium base I used SIMPLEX_GRID and BEZIER curves for atrium base arches. 
 The main stairs have been implemented through a function that I have personally developed. At the end, the wall of the main stairs has been created using SIMPLICIAL_COMPLEX function.</p>
 
-<p><img src="http://kingn.github.com/final-project/screen/basmentstairs.jpg" alt="base1"><img src="http://kingn.github.com/final-project/screen/basement2.jpg" alt="base2"></p>
+<p><img src="http://kingn.github.com/final-project/screen/basmentstairs.jpg" alt="base1"> <img src="http://kingn.github.com/final-project/screen/basement2.jpg" alt="base2"></p>
 
 <h4>First Floor</h4>
 
@@ -89,13 +93,16 @@ The main stairs have been implemented through a function that I have personally 
 
 <p>I have implemented also a simple internal stair using the alternative version of the above mentioned stairs function.</p>
 
-<p><img src="http://kingn.github.com/final-project/screen/scalaint1.JPG" alt="int2"><img src="http://kingn.github.com/final-project/screen/scalaint2.JPG" alt="int3"></p>
+<p><img src="http://kingn.github.com/final-project/screen/scalaint1.JPG" alt="int2"></p>
+<p><img src="http://kingn.github.com/final-project/screen/scalaint2.JPG" alt="int3"></p>
 
 <h4>Second Floor</h4>
 
-<p>The second floor is composed by the superior pavement, internal superior walls and another stair.
-<img src="http://kingn.github.com/final-project/images/scalaint3.jpg" alt="int4">
-The walls has been implemented by SIMPLEX_GRID and SIMPLICIAL_COMPLEX.</p>
+<p>The second floor is composed by the superior pavement, internal superior walls and another stair.</p>
+
+<p align="center"><img src="http://kingn.github.com/final-project/screen/scalaint3.JPG" alt="int4"></p>
+
+<p>The walls has been implemented by SIMPLEX_GRID and SIMPLICIAL_COMPLEX.<p>
 
 <p><img src="http://kingn.github.com/final-project/screen/2floor.JPG" alt="int4"></p>
 
@@ -104,11 +111,11 @@ The walls has been implemented by SIMPLEX_GRID and SIMPLICIAL_COMPLEX.</p>
 <p>The atrium was one of the hardest parts of the project. It is composed by the atrium arch, the columns and the tympanum. 
 The atrium arch is made by BEZIER curves while the tympanum is a mix of CUBOID and SIMPLICIAL_COMPLEX.</p>
 
-<p><img src="http://kingn.github.com/final-project/screen/atrio3.jpg" alt="atr1"></p>
+<p align="center"><img src="http://kingn.github.com/final-project/screen/atrio3.jpg" alt="atr1"></p>
 
 <p>The columns were created using CYL_SURFACE for the shaft, CUBOID, CUBIC_HERMITE and ROTATIONAL_SURFACE functions for the base and BEZIER for the capital.</p>
 
-<p><img src="http://kingn.github.com/final-project/screen/atrio2.jpg" alt="atr2"></p>
+<p><img src="http://kingn.github.com/final-project/screen/atrio.jpg" alt="atr2"></p>
 
 <h4>Roof</h4>
 
@@ -121,7 +128,9 @@ The atrium arch is made by BEZIER curves while the tympanum is a mix of CUBOID a
 <p>The decorations that I have decided to implement have been various: the internal and external frames, the windows fixtures, the balcony, the banister, the doors and the statues.
 The internal and external frames include the low, mid and top external frames, the windows and doors frames, the internal room frames and the atrium frames. All of them have been developed with SIMPLEX_GRID function and with the CUBIC_HERMITE function for the windows and door fixtures.</p>
 
-<p><img src="http://kingn.github.com/final-project/screen/atri1.JPG" alt="dec1"><img src="http://kingn.github.com/final-project/screen/cornici.JPG" alt="dec2"></p>
+<p><img src="http://kingn.github.com/final-project/screen/atri1.JPG" alt="dec1"></p>
+
+<p><img src="http://kingn.github.com/final-project/screen/cornici.JPG" alt="dec2"></p>
 
 <p>The balcony, the banister and the doors were implemented by SIMPLEX_GRID and CUBOID functions.</p>
 
@@ -139,91 +148,94 @@ The internal and external frames include the low, mid and top external frames, t
 <li>
 <p>drawHalfHouse(): shows the half section of the villa.</p>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">drawHalfHouse</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
+<div class="highlight">
+  <pre><span class="kd">var</span> <span class="nx">drawHalfHouse</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+<span class="k">  if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
     <span class="nx">CANCEL</span><span class="p">(</span><span class="nx">leftHouse</span><span class="p">);</span>
-<span class="nx">DRAW</span><span class="p">(</span><span class="nx">leftHouse</span><span class="p">);</span>
-<span class="nx">fullHouseIsDraw</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">else</span> <span class="p">{</span> 
-<span class="nx">CANCEL</span><span class="p">(</span><span class="nx">fullHouse</span><span class="p">);</span>
-<span class="nx">fullHouseIsDraw</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="nx">DRAW</span><span class="p">(</span><span class="nx">leftHouse</span><span class="p">);</span>
-<span class="nx">halfHouseIsDraw</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-<span class="nx">modelTemp</span> <span class="o">=</span> <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">clone</span><span class="p">();</span>
-<span class="p">}</span>
+<span class="nx">    DRAW</span><span class="p">(</span><span class="nx">leftHouse</span><span class="p">);</span>
+<span class="nx">    fullHouseIsDraw</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">  }</span>
+<span class="k">  else</span> <span class="p">{</span> 
+<span class="nx">    CANCEL</span><span class="p">(</span><span class="nx">fullHouse</span><span class="p">);</span>
+<span class="nx">    fullHouseIsDraw</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="nx">    DRAW</span><span class="p">(</span><span class="nx">leftHouse</span><span class="p">);</span>
+<span class="nx">    halfHouseIsDraw</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="nx">    modelTemp</span> <span class="o">=</span> <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">clone</span><span class="p">();</span>
+<span class="p">  }</span>
 <span class="p">};</span>
 </pre></div>
 </li>
 <li>
 <p>drawFullHouse(): shows the full model of the villa.</p>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">drawFullHouse</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
+<div class="highlight">
+  <pre><span class="kd">var</span> <span class="nx">drawFullHouse</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+<span class="k">  if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
     <span class="nx">CANCEL</span><span class="p">(</span><span class="nx">leftHouse</span><span class="p">);</span>
     <span class="nx">halfHouseIsDraw</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
     <span class="nx">DRAW</span><span class="p">(</span><span class="nx">fullHouse</span><span class="p">);</span>
     <span class="nx">fullHouseIsDraw</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
     <span class="nx">modelTemp</span> <span class="o">=</span> <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">clone</span><span class="p">();</span>
-<span class="p">}</span>
-<span class="k">else</span> <span class="p">{</span> 
+<span class="p">  }</span>
+<span class="k">  else</span><span class="p">{</span> 
     <span class="nx">CANCEL</span><span class="p">(</span><span class="nx">fullHouse</span><span class="p">);</span>
     <span class="nx">DRAW</span><span class="p">(</span><span class="nx">fullHouse</span><span class="p">);</span>
     <span class="nx">fullHouseIsDraw</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="p">  }</span>
 <span class="p">};</span>
 </pre></div>
 </li>
 <li>
 <p>viewInternal(): allows to view the internal of the villa by making the external walls transparent.</p>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">viewInternal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-<span class="nx">main_color</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="mf">0.5</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
-
+<div class="highlight">
+  <pre><span class="kd">var</span> <span class="nx">viewInternal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+<span class="nx">  main_color</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="mf">0.5</span><span class="p">;</span>
+<span class="k">  if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
     <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">main_color</span><span class="p">);</span>
     <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">main_color</span><span class="p">);</span>
     <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">main_color</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="k">if</span><span class="p">(</span><span class="nx">fullHouseIsDraw</span><span class="p">){</span>
+<span class="p">  }</span>
+<span class="k">  if</span><span class="p">(</span><span class="nx">fullHouseIsDraw</span><span class="p">){</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">main_color</span><span class="p">);</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">main_color</span><span class="p">);</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">main_color</span><span class="p">);</span>
-
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">main_color</span><span class="p">);</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">main_color</span><span class="p">);</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">main_color</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="p">  }</span>
 <span class="p">};</span>
 </pre></div>
 </li>
 <li>
 <p>viewExternal(): removes the transparency of the external walls.</p>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">viewExternal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
+<div class="highlight">
+  <pre><span class="kd">var</span> <span class="nx">viewExternal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+<span class="k">  if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
     <span class="nx">CANCEL</span><span class="p">(</span><span class="nx">leftHouse</span><span class="p">);</span>
     <span class="nx">leftHouse</span> <span class="o">=</span> <span class="nx">modelTemp</span><span class="p">.</span><span class="nx">clone</span><span class="p">();</span>
     <span class="nx">DRAW</span><span class="p">(</span><span class="nx">leftHouse</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="k">if</span><span class="p">(</span><span class="nx">fullHouseIsDraw</span><span class="p">){</span>
+<span class="k">  if</span><span class="p">(</span><span class="nx">fullHouseIsDraw</span><span class="p">){</span>
     <span class="nx">CANCEL</span><span class="p">(</span><span class="nx">fullHouse</span><span class="p">);</span>
     <span class="nx">fullHouse</span> <span class="o">=</span> <span class="nx">modelTemp</span><span class="p">.</span><span class="nx">clone</span><span class="p">();</span>
     <span class="nx">DRAW</span><span class="p">(</span><span class="nx">fullHouse</span><span class="p">);</span>
-<span class="p">}</span>   
+<span class="p">  }</span>   
 <span class="p">};</span>
 </pre></div>
 </li>
 <li>
 <p>removeExtWalls(): removes totally the external walls.</p>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">removeExtWalls</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
+<div class="highlight">
+  <pre><span class="kd">var</span> <span class="nx">removeExtWalls</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+<span class="k">  if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
     <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">hide</span><span class="p">();</span>
     <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">hide</span><span class="p">();</span>
     <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">hide</span><span class="p">();</span>
-<span class="p">}</span>
-<span class="k">if</span><span class="p">(</span><span class="nx">fullHouseIsDraw</span><span class="p">){</span>
+<span class="p">  }</span>
+<span class="k">  if</span><span class="p">(</span><span class="nx">fullHouseIsDraw</span><span class="p">){</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">hide</span><span class="p">();</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">hide</span><span class="p">();</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">hide</span><span class="p">();</span>
@@ -231,42 +243,42 @@ The internal and external frames include the low, mid and top external frames, t
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">hide</span><span class="p">();</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">hide</span><span class="p">();</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">hide</span><span class="p">();</span>
-<span class="p">}</span>
+<span class="p">  }</span>
 <span class="p">};</span>
 </pre></div>
 </li>
 <li>
 <p>addExtWalls(): restores the external walls.</p>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">addExtWalls</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
+<div class="highlight">
+  <pre><span class="kd">var</span> <span class="nx">addExtWalls</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+<span class="k">  if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
     <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">show</span><span class="p">();</span>
     <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">show</span><span class="p">();</span>
     <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">show</span><span class="p">();</span>
-<span class="p">}</span>
-<span class="k">if</span><span class="p">(</span><span class="nx">fullHouseIsDraw</span><span class="p">){</span>
+<span class="p">  }</span>
+<span class="k">  if</span><span class="p">(</span><span class="nx">fullHouseIsDraw</span><span class="p">){</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">show</span><span class="p">();</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">show</span><span class="p">();</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">show</span><span class="p">();</span>
-
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">show</span><span class="p">();</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">show</span><span class="p">();</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">show</span><span class="p">();</span>
-<span class="p">}</span>
+<span class="p">  }</span>
 <span class="p">};</span>
 </pre></div>
 </li>
 <li>
 <p>highlightsDec(): highlights all the decorations.</p>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">highlightsDec</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-<span class="kd">var</span> <span class="nx">highlights_color</span><span class="o">=</span><span class="p">[</span><span class="mi">253</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span><span class="mi">192</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span><span class="mi">8</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span><span class="mi">1</span><span class="p">];</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
-
+<div class="highlight">
+  <pre><span class="kd">var</span> <span class="nx">highlightsDec</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+<span class="kd">  var</span> <span class="nx">highlights_color</span><span class="o">=</span><span class="p">[</span><span class="mi">253</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span><span class="mi">192</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span><span class="mi">8</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span><span class="mi">1</span><span class="p">];</span>
+<span class="k">  if</span> <span class="p">(</span><span class="nx">halfHouseIsDraw</span><span class="p">){</span>
     <span class="nx">leftHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">highlights_color</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="k">if</span><span class="p">(</span><span class="nx">fullHouseIsDraw</span><span class="p">){</span>
-    <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">highlights_color</span><span class="p">);</span>
+<span class="k">  if</span><span class="p">(</span><span class="nx">fullHouseIsDraw</span><span class="p">){</span>
+<span class="nx">    fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">highlights_color</span><span class="p">);</span>
     <span class="nx">fullHouse</span><span class="p">.</span><span class="nx">structs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">structs</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="nx">color</span><span class="p">(</span><span class="nx">highlights_color</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="p">};</span>
@@ -275,8 +287,9 @@ The internal and external frames include the low, mid and top external frames, t
 <li>
 <p>noHighlightsDec(): removes the highlights of the decorations.</p>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">noHighlightsDec</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-<span class="nx">viewExternal</span><span class="p">();</span>
+<div class="highlight">
+  <pre><span class="kd">var</span> <span class="nx">noHighlightsDec</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+<span class="nx">  viewExternal</span><span class="p">();</span>
 <span class="p">};</span>
 </pre></div>
 </li>
