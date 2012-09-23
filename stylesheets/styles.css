@@ -141,6 +141,7 @@ a:focus {
  */
 a:hover,
 a:active {
+-moz-transition: text-shadow 0.5s ease 0s;
   outline: 0;
 }
 
@@ -307,6 +308,7 @@ ul {
  */
 nav ul,
 nav ol {
+-moz-transition: text-shadow 0.5s ease 0s;
   list-style: none;
   list-style-image: none;
 }
@@ -543,12 +545,14 @@ h3 {
 }
 
 a {
+ -moz-transition: text-shadow 0.5s ease 0s;
   color: #3399cc;
   font-weight: 400;
   text-decoration: none;
 }
 
 a small {
+-moz-transition: text-shadow 0.5s ease 0s;
   font-size: 11px;
   color: #666;
   margin-top: -0.6em;
